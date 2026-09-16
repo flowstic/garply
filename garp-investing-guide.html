@@ -3,63 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GARP Investing & Guidance</title>
+    <title>GARP Investing Guide | GARPly</title>
     <style>
+        :root {
+            --bg-base: #121212;
+            --bg-card: #1E1E2C;
+            --bg-card-alt: #151522;
+            --border-subtle: #2D2D3F;
+            --border-card: rgba(255, 255, 255, 0.08);
+            --text-primary: #FFFFFF;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --accent-green: #22C55E;
+            --accent-green-bg: rgba(34, 197, 94, 0.12);
+            --warning: #F59E0B;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #121212;
-            color: #E0E0E0;
+            background-color: var(--bg-base);
+            color: var(--text-secondary);
             line-height: 1.6;
-            padding: 2rem;
-            max-width: 800px;
+            padding: 2rem 1.5rem;
+            max-width: 720px;
             margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
         }
+
         h1, h2, h3 {
-            color: #ffffff;
+            color: var(--text-primary);
             margin-top: 0;
+            letter-spacing: -0.02em;
         }
+
         h1 {
-            border-bottom: 2px solid #22C55E;
-            padding-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 1rem;
             margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .accent {
-            color: #22C55E;
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
+
+        .logo-box {
+            width: 36px;
+            height: 36px;
+            background-color: var(--accent-green);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0A0A0F;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
         .card {
-            background-color: #1E1E2C;
+            background-color: var(--bg-card);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            border: 1px solid #2A2A3A;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-card);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-        .metric {
-            font-weight: bold;
-            color: #22C55E;
-            font-size: 1.1em;
+
+        .metric-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
         }
+
+        .metric-item {
+            background-color: var(--bg-card-alt);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-name {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .metric-target {
+            background-color: var(--accent-green-bg);
+            color: var(--accent-green);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
         ul {
-            padding-left: 1.5rem;
+            padding-left: 1.25rem;
             margin-top: 0.5rem;
+            margin-bottom: 0;
         }
+
         li {
             margin-bottom: 0.75rem;
         }
-        .warning {
-            color: #F59E0B;
-            font-weight: bold;
+        
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-pill {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(245, 158, 11, 0.12);
+            color: var(--warning);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
         }
     </style>
 </head>
 <body>
 
-    <h1>GARP Investing: Growth at a <span class="accent">Reasonable Price</span></h1>
+    <h1>
+        <div class="logo-box">G</div>
+        <div>GARP Investing Guide</div>
+    </h1>
 
     <div class="card">
         <h2>What is GARP?</h2>
         <p>
-            <strong>GARP (Growth at a Reasonable Price)</strong> is an equity investment strategy that seeks to combine the best aspects of both growth investing and value investing. Popularized by legendary Fidelity fund manager Peter Lynch, GARP investors look for companies that are showing consistent earnings growth above broad market levels, while excluding companies that have extremely high valuations.
+            <strong>GARP (Growth at a Reasonable Price)</strong> is an equity investment strategy that seeks to combine the best aspects of both growth investing and value investing. Popularized by legendary Fidelity fund manager Peter Lynch, GARP investors look for companies showing consistent earnings growth above broad market levels, while excluding companies with extremely high valuations.
         </p>
         <p>
             The goal is to avoid the volatility of overpriced "hype" stocks and the stagnation of cheap "value traps."
@@ -68,30 +179,49 @@
 
     <div class="card">
         <h2>Core Metrics & Screening Guidance</h2>
-        <p>When screening for GARP stocks, pay close attention to the following indicators:</p>
+        <p>Our screener evaluates GARP candidates using four primary indicators:</p>
         
-        <ul>
-            <li>
-                <span class="metric">PEG Ratio (Price/Earnings-to-Growth):</span> Ideally <strong>under 1.0</strong>. This is the holy grail of GARP investing. It divides the P/E ratio by the company's expected earnings growth rate. A PEG of 1.0 implies the stock is fairly valued relative to its growth. Anything lower suggests it is undervalued.
-            </li>
-            <li>
-                <span class="metric">EPS Growth (3-5 Years):</span> Look for consistent, compounded annual growth rates (CAGR) between <strong>10% and 25%</strong>. Growth rates above 25-30% are often unsustainable and command massive valuation premiums that GARP investors want to avoid.
-            </li>
-            <li>
-                <span class="metric">Price-to-Free Cash Flow (P/FCF):</span> Must be <strong>positive</strong>. A negative P/FCF means the company is burning cash <span class="warning">(⚠️)</span>. GARP investors want self-sustaining businesses, not speculative ventures that constantly need to raise debt or dilute shareholders to fund operations.
-            </li>
-            <li>
-                <span class="metric">Debt-to-Equity Ratio:</span> Ideally <strong>under 0.5</strong>. A strong balance sheet provides a margin of safety. Low debt means the company's growth is funded by its own cash flow rather than heavy borrowing.
-            </li>
-        </ul>
+        <div class="metric-grid">
+            <div class="metric-item">
+                <div class="metric-header">
+                    <span class="metric-name">PEG Ratio (Fwd P/E to Growth)</span>
+                    <span class="metric-target">Ideally &le; 1.0</span>
+                </div>
+                <p>The holy grail of GARP investing. It divides the P/E ratio by the expected earnings growth rate. A PEG of 1.0 implies the stock is fairly valued relative to its growth. Anything lower suggests it is undervalued.</p>
+            </div>
+
+            <div class="metric-item">
+                <div class="metric-header">
+                    <span class="metric-name">EPS Growth (3-Year)</span>
+                    <span class="metric-target">10% - 25% CAGR</span>
+                </div>
+                <p>Look for consistent, compounded annual growth. Growth rates above 25-30% are often unsustainable and command massive valuation premiums that GARP investors want to avoid.</p>
+            </div>
+
+            <div class="metric-item">
+                <div class="metric-header">
+                    <span class="metric-name">Price-to-Free Cash Flow</span>
+                    <span class="metric-target">Positive</span>
+                </div>
+                <p>A negative P/FCF means the company is burning cash <span class="warning-pill">&#9888; High Risk</span>. GARP investors want self-sustaining businesses, not speculative ventures reliant on debt dilution.</p>
+            </div>
+
+            <div class="metric-item">
+                <div class="metric-header">
+                    <span class="metric-name">Debt-to-Equity</span>
+                    <span class="metric-target">Ideally &le; 0.5</span>
+                </div>
+                <p>A strong balance sheet provides a margin of safety. Low debt means growth is funded by internal cash flow rather than heavy borrowing.</p>
+            </div>
+        </div>
     </div>
 
     <div class="card">
         <h2>The GARP Philosophy: What to Avoid</h2>
         <ul>
-            <li><strong>The "Hyper-Growth" Trap:</strong> Companies growing revenue at 50%+ but losing money every quarter. These often trade at 20x+ Price-to-Sales and carry high risk of multiple contraction.</li>
+            <li><strong>The "Hyper-Growth" Trap:</strong> Companies growing revenue rapidly but losing money every quarter. These often trade at 20x+ Price-to-Sales and carry high risk of multiple contraction.</li>
             <li><strong>The "Value" Trap:</strong> Companies trading at a 5x P/E ratio but with shrinking revenues, dying industries, or massive debt loads. They are cheap for a reason.</li>
-            <li><strong>Cyclical Peaks:</strong> Be cautious of low P/E ratios in highly cyclical industries (like commodities or auto manufacturing) at the top of an economic cycle, as earnings may soon fall.</li>
+            <li><strong>Cyclical Peaks:</strong> Be cautious of low P/E ratios in highly cyclical industries (like commodities) at the top of an economic cycle, as earnings may soon fall.</li>
         </ul>
     </div>
 
@@ -100,6 +230,10 @@
         <p>
             A perfect GARP stock is a "boring but beautiful" compounder. It steadily grows its bottom line year after year, generates strong free cash flow, avoids excessive leverage, and can be purchased today at a valuation that doesn't require heroic future assumptions to generate a strong return.
         </p>
+    </div>
+
+    <div class="footer">
+        Powered by GARPly • Growth at a Reasonable Price
     </div>
 
 </body>
