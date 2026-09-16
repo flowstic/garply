@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GARP Investing Guide | GARPly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Doppio+One&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-base: #121212;
@@ -14,8 +15,8 @@
             --text-primary: #FFFFFF;
             --text-secondary: #94A3B8;
             --text-muted: #64748B;
-            --accent-green: #22C55E;
-            --accent-green-bg: rgba(34, 197, 94, 0.12);
+            --accent-green: #0BEDA4;
+            --accent-green-bg: rgba(11, 237, 164, 0.12);
             --warning: #F59E0B;
         }
 
@@ -44,6 +45,7 @@
             margin-bottom: 2rem;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 12px;
         }
 
@@ -62,8 +64,13 @@
             align-items: center;
             justify-content: center;
             color: #0A0A0F;
-            font-weight: 800;
-            font-size: 20px;
+            font-family: 'Doppio One', sans-serif;
+            font-size: 22px;
+        }
+        
+        .app-name {
+            font-family: 'Doppio One', sans-serif;
+            font-weight: 400;
         }
 
         .card {
@@ -163,8 +170,11 @@
 <body>
 
     <h1>
-        <div class="logo-box">G</div>
-        <div>GARP Investing Guide</div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-right: 8px;">
+            <div class="logo-box">G</div>
+            <div class="app-name">GARPly</div>
+        </div>
+        <div>Investing Guide</div>
     </h1>
 
     <div class="card">
@@ -179,7 +189,7 @@
 
     <div class="card">
         <h2>Core Metrics & Screening Guidance</h2>
-        <p>Our screener evaluates GARP candidates using four primary indicators:</p>
+        <p>Our screener evaluates GARP candidates using five primary indicators:</p>
         
         <div class="metric-grid">
             <div class="metric-item">
@@ -188,6 +198,14 @@
                     <span class="metric-target">Ideally &le; 1.0</span>
                 </div>
                 <p>The holy grail of GARP investing. It divides the P/E ratio by the expected earnings growth rate. A PEG of 1.0 implies the stock is fairly valued relative to its growth. Anything lower suggests it is undervalued.</p>
+            </div>
+            
+            <div class="metric-item">
+                <div class="metric-header">
+                    <span class="metric-name">Forward P/E Ratio</span>
+                    <span class="metric-target">Ideally &le; 17x</span>
+                </div>
+                <p>The Price-to-Earnings ratio indicates how much the market is willing to pay today for a dollar of expected future earnings. A lower P/E ratio relative to the market and sector averages suggests the stock is reasonably priced.</p>
             </div>
 
             <div class="metric-item">
