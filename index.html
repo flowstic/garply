@@ -5,123 +5,338 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="szm1c-mTQWqVrL3N1eESulacbrhALStXBaa9LQIET54" />
   
-  <title>Support - GARPly GARP Stock Screener</title>
+  <title>GARPly - Customer Support & Knowledge Base</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #121212;
-      color: #FFFFFF;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 24px;
+    :root {
+      --bg-dark: #0B0F19;
+      --card-bg: #141A26;
+      --card-border: #222C3D;
+      --accent-mint: #0BEDA4;
+      --accent-hover: #09d492;
+      --text-white: #F8FAFC;
+      --text-body: #CBD5E1;
+      --text-muted: #94A3B8;
+      --callout-bg: #0F1624;
+      --inner-card-bg: rgba(15, 22, 36, 0.7);
+    }
+
+    * {
       box-sizing: border-box;
     }
-    .card {
-      background-color: #1E1E2C;
-      padding: 36px 32px;
-      border-radius: 16px;
-      border: 1px solid #2D2D3F;
-      max-width: 540px;
-      width: 100%;
-      text-align: left;
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    h1 { color: #0BEDA4; margin: 0 0 8px 0; font-size: 26px; }
-    h2 { color: #F1F5F9; font-size: 16px; margin: 24px 0 10px 0; border-bottom: 1px solid #2D2D3F; padding-bottom: 6px; }
-    p { color: #94A3B8; font-size: 14px; line-height: 1.6; margin: 0 0 12px 0; }
-    
-    .contact-box {
-      background: #14141F;
-      border: 1px solid #2A2A3C;
-      border-radius: 10px;
-      padding: 16px;
-      text-align: center;
-      margin: 16px 0;
-    }
-    .contact-btn {
-      display: inline-block;
-      background-color: #0BEDA4;
-      color: #0F172A;
-      font-weight: 600;
-      font-size: 14px;
-      padding: 10px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 8px;
-      transition: opacity 0.2s;
-    }
-    .contact-btn:hover { opacity: 0.9; }
 
-    ul { padding-left: 20px; color: #94A3B8; font-size: 14px; line-height: 1.6; margin: 0 0 16px 0; }
-    li { margin-bottom: 6px; }
-    
-    .links {
-      margin-top: 28px;
-      padding-top: 16px;
-      border-top: 1px solid #2D2D3F;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      background-color: var(--bg-dark);
+      color: var(--text-body);
+      margin: 0;
+      padding: 32px 16px 64px 16px;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Top Navigation Header */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 28px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      color: var(--accent-mint);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-mint);
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      color: var(--text-white);
+      font-size: 28px;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Contact Action Card */
+    .contact-card {
+      background: linear-gradient(180deg, #121824 0%, #0F1520 100%);
+      border: 1px solid var(--card-border);
+      border-top: 2px solid var(--accent-mint);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      margin: 24px 0 32px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-title {
+      color: var(--text-white);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .contact-subtitle {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      margin-bottom: 16px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background-color: var(--accent-mint);
+      color: #0B0F19;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 11px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      box-shadow: 0 2px 10px rgba(11, 237, 164, 0.25);
+    }
+
+    .contact-btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .email-caption {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin: 12px 0 0 0;
+    }
+
+    /* Section Cards */
+    .section-block {
+      background-color: var(--inner-card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      color: var(--text-white);
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent-mint);
+    }
+
+    p {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      color: var(--text-body);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-body);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    li strong {
+      color: var(--text-white);
+    }
+
+    a {
+      color: var(--accent-mint);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--accent-hover);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-links {
+      display: flex;
       gap: 20px;
     }
-    a { color: #0BEDA4; text-decoration: none; font-size: 13px; }
-    a:hover { text-decoration: underline; }
-    .footer-note { text-align: center; font-size: 12px; color: #64748B; margin-top: 16px; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-mint);
+    }
+
+    .copyright {
+      font-size: 12px;
+      color: #64748B;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 18px;
+      }
+      h1 { font-size: 24px; }
+      .contact-card { padding: 20px 16px; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
-      <h1>GARPly Support</h1>
-      <p>Growth at a Reasonable Price (GARP) Stock Screener & Valuation Intelligence</p>
+
+  <div class="container">
+    <!-- Top Navigation Header -->
+    <div class="nav-bar">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">GARPly</span>
+      </a>
+      <div class="nav-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="tos.html">Terms of Service</a>
+      </div>
     </div>
 
-    <div class="contact-box">
-      <p style="color: #F1F5F9; font-weight: 500; margin-bottom: 4px;">Need help with your account or app feedback?</p>
-      <p style="font-size: 13px; margin-bottom: 12px;">Our team typically responds within 24–48 business hours.</p>
-      <!-- Replace with your support email -->
+    <!-- Title Header -->
+    <div class="header">
+      <h1>Support Center</h1>
+      <p class="subtitle">Growth at a Reasonable Price (GARP) Stock Screener & Valuation Intelligence</p>
+    </div>
+
+    <!-- Contact Support Box -->
+    <div class="contact-card">
+      <div class="contact-title">Need help with your account or have feedback?</div>
+      <div class="contact-subtitle">Our support team typically responds within 24–48 business hours.</div>
       <a href="mailto:flowstic.io@gmail.com?subject=GARPly%20Support%20Request" class="contact-btn">
         Contact Support via Email
       </a>
-      <p style="font-size: 12px; color: #64748B; margin: 8px 0 0 0;">flowstic.io@gmail.com</p>
+      <p class="email-caption">Direct email: <a href="mailto:flowstic.io@gmail.com">flowstic.io@gmail.com</a></p>
     </div>
 
-    <h2>Subscriptions & Pro Access</h2>
-    <ul>
-      <li><strong>Restoring Purchases:</strong> In the app, open the Profile Menu (tap your avatar) and tap <em>Restore Purchases</em>.</li>
-      <li><strong>Manage or Cancel:</strong> Subscriptions are managed directly by Apple or Google:
-        <br>• iOS: <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple Subscriptions Manager</a>
-        <br>• Android: <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google Play Subscriptions</a>
-      </li>
-      <li><strong>Refunds:</strong> Since billing is processed through Apple In-App Purchase or Google Play Billing, refund requests must be submitted through their respective store support portals.</li>
-    </ul>
-
-    <h2>Account & Data Management</h2>
-    <p>To request permanent deletion of your account and all associated watchlists/preferences:</p>
-    <ul>
-      <li>In the app: Tap your profile avatar &gt; <em>Delete Account</em>.</li>
-      <li>Or email us at <a href="mailto:flowstic.io@gmail.com?subject=Account%20Deletion%20Request">flowstic.io@gmail.com</a> with the subject line <strong>"Account Deletion Request"</strong> from your registered email.</li>
-    </ul>
-
-    <h2>Frequently Asked Questions</h2>
-    <ul>
-      <li><strong>What is the GARP Score?</strong> It is a quantitative 0–100 rating balancing forward PEG ratio, 3-year EPS growth compound rate, forward P/E, debt-to-equity leverage, and cash flow generation.</li>
-      <li><strong>How often is stock data refreshed?</strong> Fundamental multiples and market prices are updated once daily overnight around 2:00 AM UTC (shortly after US market after-hours close), ensuring all metrics and screens are fully finalized well before the next trading day.</li>
-    </ul>
-
-    <div class="links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="tos.html">Terms of Service</a>
+    <!-- Subscriptions & Billing -->
+    <div class="section-block">
+      <h2>Subscriptions & Pro Access</h2>
+      <ul>
+        <li><strong>Restoring Purchases:</strong> In the app, open the Profile Menu (tap your avatar) and select <em>Restore Purchases</em>.</li>
+        <li><strong>Manage or Cancel:</strong> Subscriptions are managed directly by Apple or Google:
+          <br>&bull; iOS: <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple Subscriptions Manager</a>
+          <br>&bull; Android: <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google Play Subscriptions</a>
+        </li>
+        <li><strong>Refunds:</strong> Because billing is processed securely through Apple In-App Purchases or Google Play Billing, refund requests must be submitted directly through their respective store portals.</li>
+      </ul>
     </div>
 
-    <div class="footer-note">
-      &copy; 2026 GARPly. All rights reserved.
+    <!-- Account & Data Management -->
+    <div class="section-block">
+      <h2>Account & Data Management</h2>
+      <p>To request permanent deletion of your account and all associated watchlists/preferences:</p>
+      <ul>
+        <li><strong>In the App:</strong> Tap your profile avatar &gt; select <em>Delete Account</em>.</li>
+        <li><strong>Via Email:</strong> Email us at <a href="mailto:flowstic.io@gmail.com?subject=Account%20Deletion%20Request">flowstic.io@gmail.com</a> with the subject line <strong>"Account Deletion Request"</strong> from your registered account email.</li>
+      </ul>
+    </div>
+
+    <!-- Frequently Asked Questions -->
+    <div class="section-block">
+      <h2>Frequently Asked Questions</h2>
+      <ul>
+        <li><strong>What is the GARP Score?</strong> It is a quantitative 0–100 rating balancing forward PEG ratio, 3-year EPS growth compound rate, forward P/E, debt-to-equity leverage, and cash flow generation.</li>
+        <li><strong>How often is stock data refreshed?</strong> Fundamental multiples and market prices are updated once daily overnight around 2:00 AM UTC (shortly after US market after-hours close), ensuring all metrics and screens are fully finalized well before the next trading day.</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="tos.html">Terms of Service</a>
+      </div>
+      <p class="copyright">&copy; 2026 GARPly. All rights reserved.</p>
     </div>
   </div>
+
 </body>
 </html>
